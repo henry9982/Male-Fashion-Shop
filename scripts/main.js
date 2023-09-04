@@ -204,11 +204,13 @@ if (!indexToChooseProduct) {
 indexLocalStorage(indexToChooseProduct)
 
 
-const storedTargetDateString = JSON.parse(localStorage.getItem('targetdate'))
+let storedTargetDateString = JSON.parse(localStorage.getItem('targetdate'))
 if (!storedTargetDateString) {
     const targetDate = new Date()
     targetDate.setDate(targetDate.getDate()+7)
-    localStorage.setItem('targetdate',JSON.stringify(targetDate))
+    storedTargetDateString=targetDate
+    localStorage.setItem('targetdate',JSON.stringify(storedTargetDateString))
+    
 }
 let storedTargetDate = new Date(storedTargetDateString)
 
