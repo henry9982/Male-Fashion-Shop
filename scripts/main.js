@@ -204,7 +204,7 @@ if (!indexToChooseProduct) {
 indexLocalStorage(indexToChooseProduct)
 
 
-const storedTargetDateString = JSON.parse(localStorage.getItem('targetdatee'))
+const storedTargetDateString = JSON.parse(localStorage.getItem('targetdate'))
 if (!storedTargetDateString) {
     const targetDate = new Date()
     targetDate.setDate(targetDate.getDate()+7)
@@ -215,6 +215,7 @@ let storedTargetDate = new Date(storedTargetDateString)
 promotionTimeCountDown()
 
 export function promotionTimeCountDown() {
+    console.log(storedTargetDate);
 
     const {title,price,image,id} = products[0][indexToChooseProduct]
     weeklySaleImageTag.src=`..${image}`
