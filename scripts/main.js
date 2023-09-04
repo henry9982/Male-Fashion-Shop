@@ -204,7 +204,7 @@ if (!indexToChooseProduct) {
 indexLocalStorage(indexToChooseProduct)
 
 
-const storedTargetDateString = JSON.parse(localStorage.getItem('targetdate'))
+const storedTargetDateString = JSON.parse(localStorage.getItem('targetdatee'))
 if (!storedTargetDateString) {
     const targetDate = new Date()
     targetDate.setDate(targetDate.getDate()+7)
