@@ -1,13 +1,14 @@
+<!-- https://themewagon.github.io/malefashion/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>Male Fashion</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/home.css">
     <script src="https://kit.fontawesome.com/d1b39a22d9.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
@@ -15,9 +16,22 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
 <body>
-    <header class=" bg-body-tertiary p-2" style="box-shadow: rgba(225, 225, 225, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;">
+
+    <header class="container-fluid bg-dark text-white d-none d-lg-block">
+        <div class="container inner-container-noti-bar d-flex justify-content-between py-2 px-5">
+            <small>
+                Free shipping, 30-day return or refund guarantee
+            </small>
+            <small class="d-flex gap-1">
+                <a href="login.html" class="nav-link">LOGIN</a>
+                <video width="20" height="20" preload="none" style="background: transparent  url('https://cdn-icons-png.flaticon.com/512/8121/8121295.png') 50% 50% / fit no-repeat;border-radius: 100px;" autoplay="autoplay" loop="true" muted="muted" playsinline="">
+                    <source src="https://cdn-icons-mp4.flaticon.com/512/8121/8121295.mp4" type="video/mp4">
+                </video>            </small>
+        </div>
+    </header>
+    <header class=" bg-body-tertiary bg-white p-2" style="box-shadow: rgba(225, 225, 225, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;">
         <nav class="navbar container justify-content-between ">
-            <a href="home.html" class="navbar-brand"><img class="img-fluid" src="/pics/logo.png" alt=""></a>
+            <a href="home.html" class="navbar-brand"><img class="img-fluid" src="../pics/logo.png" alt=""></a>
             <div class="flex-grow-1 d-none d-lg-block flex-column position-relative link-outer-container">
                 <ul class="d-flex justify-content-around mb-0 link-container position-relative">
                 </ul>
@@ -25,15 +39,15 @@
             </div>
             <ul class="d-flex mb-0 d-none d-lg-block search-container position-relative">
                 <div class="input-group flex-row overflow-x-hidden flex-nowrap inner-container position-relative">
-                    <input type="text" class="search-input-cus"  placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <input type="text" class="search-input-cus header-search-input"  placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2">
                     <i class="bi bi-x-lg position-absolute cancle" style="right: 50px;top: 11px;display: none;"></i>
-                    <button class="btn btn-outline-secondary search-btn" type="button" id="button-addon2 position-relative"><i class="bi bi-search"></i></button>
+                    <button class="btn btn-outline-secondary search-btn header-search-btn" type="button" id="button-addon2 position-relative"><i class="bi bi-search"></i></button>
                 </div>
             </ul>
             <div class="d-none d-lg-block mx-2 ">
                 <ul class="d-flex justify-content-between mb-0 gap-4">
-                    <li class="nav-link"><a class="nav-link" href="#"><i class="position-relative bi bi-heart"><div class="fst-normal position-absolute text-warning" style="right: -5px; top: -14px;">0</div></i></a></li>
-                    <li class="nav-link"><a class="nav-link" href="#"><i class="position-relative bi bi-bag-heart"><div class="fst-normal position-absolute text-warning" style="right: -5px; top: -14px;">0</div></i></a></li>
+                    <li class="nav-link"><a rel="noopener noreferrer" class="nav-link fav-tab" href="fav-cart.html"><i class="position-relative bi bi-heart"><div class="fst-normal position-absolute text-warning fav-item-count" style="right: -5px; top: -14px;">0</div></i></a></li>
+                    <li class="nav-link"><a rel="noopener noreferrer" class="nav-link add-to-cart-tab" href="add-to-cart-page.html"><i class="position-relative bi bi-bag-heart"><div class="fst-normal quantity-number position-absolute text-warning" style="right: -5px; top: -14px;">0</div></i></a></li>
                 </ul>
             </div>
             <i class="fa-solid fa-bars d-block d-lg-none p-0" style="font-size: 30px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" href='#offcanvas' role="button" aria-controls="offcanvasScrolling"></i>
@@ -49,36 +63,36 @@
             <div class="row row-cols-1 gap-3 d-flex justify-content-center">
                 <div class="row text-center">
                     <div class="col-4">
-                        <li class="nav-link"><a class="nav-link" href="#"><i class="position-relative bi bi-heart"style="font-size:20px"><small class="fst-normal position-absolute text-warning" style="right: -6px; top: -16px;">0</small></i></a></li>
+                        <li class="nav-link"><a rel="noopener noreferrer" class="nav-link" href="fav-cart.html"><i class="position-relative bi bi-heart"style="font-size:20px"><small class="fst-normal position-absolute text-warning fav-item-count" style="right: -6px; top: -16px;">0</small></i></a></li>
                     </div>
                     <div class="col-4">
-                        <li class="nav-link"><a class="nav-link" href="#"><i title="Register" class="position-relative bi bi-person-square"style="font-size:20px"></i></a></li>
+                        <li class="nav-link"><a rel="noopener noreferrer" class="nav-link" href="login.html"><i title="Register" class="position-relative bi bi-person-square"style="font-size:20px"></i></a></li>
                     </div>
                     <div class="col-4">
-                        <li class="nav-link"><a class="nav-link" href="#"><i class="position-relative bi bi-bag-heart"style="font-size:20px"><small class="fst-normal position-absolute text-warning" style="right: -6px; top: -16px;">0</small></i></a></li>
+                        <li class="nav-link"><a rel="noopener noreferrer" class="nav-link" href="add-to-cart-page.html"><i class="position-relative bi bi-bag-heart"style="font-size:20px"><small class="fst-normal position-absolute text-warning quantity-number" style="right: -6px; top: -16px;">0</small></i></a></li>
                     </div>
                     <div class="input-group my-3">
-                        <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+                        <input type="text" class="form-control offcan-input" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary offcan-btn" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
                     </div>
                 </div>
                 <div class="col">
-                    <a href="#" class="nav-link" style="font-size: 18px;">
+                    <a rel="noopener noreferrer" href="home.html" class="nav-link" style="font-size: 18px;">
                         Home
                     </a>                    
                 </div>
                 <div class="col">
-                    <a href="#" class="nav-link" style="font-size: 18px;">
+                    <a rel="noopener noreferrer" href="shop.html" class="nav-link" style="font-size: 18px;">
                         Shop
                     </a>                    
                 </div>
                 <div class="col">
-                    <a href="#" class="nav-link" style="font-size: 18px;">
+                    <a rel="noopener noreferrer" href="blog.html" class="nav-link" style="font-size: 18px;">
                         Blog
                     </a>
                 </div>
                 <div class="col">
-                    <a href="#" class="nav-link" style="font-size: 18px;">
+                    <a rel="noopener noreferrer" href="contacts.html" class="nav-link" style="font-size: 18px;">
                         Contacts
                     </a>
                 </div>
@@ -86,34 +100,211 @@
                     <small>Free shipping, 30-day return or refurn guarantee.</small>
                 </div>
                 <div class="row text-center">
-                    <div class="col"><a href="">
+                    <div class="col"><a href="#">
                         Privacy
                     </a></div>
-                    <div class="col"><a href="">
+                    <div class="col"><a href="#">
                         Policy
                     </a></div>
                 </div>
             </div>
         </div>
-      </div>
+    </div>
 
 
-      <main class="container-fluid swiper-container">
-        <div class="swiper container-fluid container-lg">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper container-fluid">
-
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-          
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div>
-      </main>      
+      <main class="main-container">
+        <section class="container-fluid swiper-container d-flex flex-column justify-content-center align-items-center position-relative">
+            <div class="swiper container-fluid">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper container-fluid">
     
-    <script type="module" src="/scripts/main.js"></script>
-    <script type="module" src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <video class="position-absolute" width="56" height="56" preload="none" style="background: transparent  url('https://cdn-icons-png.flaticon.com/512/10522/10522218.png') 50% 50% / fit no-repeat;bottom: -60px;" autoplay="autoplay" loop="true" muted="muted" playsinline="">
+                <source src="https://cdn-icons-mp4.flaticon.com/512/10522/10522218.mp4" type="video/mp4">
+            </video>
+        </section> 
+
+        <section class="user-intro">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 offset-lg-4 hidden-right">
+                        <div class="item-contain item-contain-one" id="itc1">
+                                <div class="item-pic">
+                                    <img class="img-fluid" src="../pics/d3b9f6931b7cdb8ad8b141dd2387626c-removebg-preview.png" alt="">
+                                </div>
+                            <div class="item-des">
+                                <h4>Clothing collections 2023</h4>
+                                <a href="shop.html" class="nav-link shop-now "><small>SHOP NOW</small><div class="link-underline-hover itc1"></div></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 hidden-left">
+                        <div class="item-contain item-contain-two" id="itc2">
+                                <div class="item-pic">
+                                    <img class="img-fluid" src="../pics/Unisex_Round_Reading_Glasses_Small_Black_Tortoise_Alloy_-_+50___tortoise-removebg-preview.png" alt="">
+                                </div>
+                            <div class="item-des">
+                                <h4>Accessories</h4>
+                                <a href="shop.html" class="nav-link shop-now "><small>SHOP NOW</small><div class="link-underline-hover itc2"></div></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7  hidden-right">
+                        <div class="item-contain item-contain-three" id="itc3">
+                                <div class="item-pic">
+                                    <img class="img-fluid" src="../pics/Men_Leather_Shoes_Business_Dress_Shoes_All-Match_Casual_Shoes_Shock-Absorbing_Footwear_Wear-Resistant_-_style_1_brown___43___China-removebg-preview.png" alt="">
+                                </div>
+                            <div class="item-des ">
+                                <h4>Shoes Spring 2023</h4>
+                                <a href="shop.html" class="nav-link shop-now "><small>SHOP NOW</small><div class="link-underline-hover itc3"></div></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sample-shop-card-container my-5">
+            <div class="container d-flex flex-column align-items-center">
+                <ul class="nav nav-tabs gap-1 gap-sm-5 text-warning mb-5 hidden-up" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active smaple-card-tab" id="BestSellers-tab" data-bs-toggle="tab" data-bs-target="#BestSellers-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Best Sellers</button>
+                      <a class="d-none bestSeller" href="#BestSellers-tab"></a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link smaple-card-tab" id="NewArrivals-tab" data-bs-toggle="tab" data-bs-target="#NewArrivals-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">New Arrivals</button>
+                      <a class="d-none newArrivals" href="#NewArrivals-tab"></a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link smaple-card-tab" id="HotSales-tab" data-bs-toggle="tab" data-bs-target="#HotSales-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Hot Sales</button>
+                      <a class="d-none hotSales" href="#HotSales-tab"></a>
+                    </li>
+                </ul>
+                  <div class="tab-content p-0 py-5 p-md-2" id="myTabContent hidden-up">
+                    <div class="tab-pane fade show active" id="BestSellers-tab-pane" role="tabpanel" aria-labelledby="BestSellers-tab" tabindex="0">
+                        <div class="row row-cols-2 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 g-4 best-sellers-container hidden-up">
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="NewArrivals-tab-pane" role="tabpanel" aria-labelledby="NewArrivals-tab" tabindex="0">
+                        <div class="row row-cols-2 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 g-4 new-arrivals-container hidden-up">
+                            
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="HotSales-tab-pane" role="tabpanel" aria-labelledby="HotSales-tab" tabindex="0">
+                        <div class="row row-cols-2 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 g-4 hot-sales-container hidden-up">
+                            
+                        </div>
+                    </div>
+                  </div>
+            </div>
+        </section>
+
+        <section class="weekly-sale-contianer container-fluid d-flex justify-content-center position-relative hidden-up">
+            <div class="position-relative inner-container d-flex flex-column align-items-center justify-content-center flex-md-row">
+                <div class="container-fluid weekly-image position-relative">
+                    <img class="weekly-sale-image" src="../pics/bestseller/pics/61WY5nC9yfL._AC_UX679_-removebg-preview.png" alt="">
+                    <div class="d-flex weekly-price text-center"><small>Sale Of</small> <p class="promo-price">$40.99</p><span class="normal-price">$55.99</span></div>
+                </div>
+                <div class="weekly-sale-text-container d-flex flex-column gap-3 w-75 flex-nowrap">
+                        <small class="text-danger ">DEAL OF THE WEEK <small>20%</small></small>
+                        <h2 class="weekly-sale-title">Product Name</h2>
+                        <h4 class="d-flex align-items-center">
+                            <div class="days">00</div>
+                            <small>:</small>
+                            <div class="hours">00</div>
+                            <small>:</small>
+                            <div class="minutes">00</div>
+                            <small>:</small>
+                            <div class="seconds">00</div>
+                        </h4>
+                        <button class="btn btn-dark w-50 text-nowrap shop-now-btn"><small>SHOP NOW</small></button>
+                </div>
+            </div>
+            <div class="background-animation position-absolute align-self-center container-fluid"></div>
+            
+        </section>
+
+        <section class="d-flex justify-content-center align-items-center intro-grid-container">
+            <div class="container d-flex flex-column flex-md-row justify-content-between" style="width: 900px;">
+                <div class="d-flex flex-column hidden-left">
+                    <div class="d-flex flex-row intro-image-grid-container">
+                        <img class="img-fluid" src="../pics/intro-pics/71Ewb8VpSqL._SX466_.jpg" alt="">
+                        <img class="img-fluid" src="../pics/intro-pics/81cmmgwQnVL._AC_UF350,350_QL80_.jpg" alt="">
+                        <img class="img-fluid" src="../pics/intro-pics/850873-7.jpg" alt="">
+                    </div>
+                    <div class="d-flex flex-row intro-image-grid-container">
+                        <img class="img-fluid" src="../pics/intro-pics/g-home-banner-1.jpg" alt="">
+                        <img class="img-fluid" src="../pics/intro-pics/images (2).jpg" alt="">
+                        <img class="img-fluid" src="../pics/intro-pics/images (3).jpg" alt="">
+                    </div>
+                </div>
+                <div class="d-flex flex-column justify-content-center intro-grid-text-container hidden-right" >
+                    <h5>BE STYLISH / BE MORDEN</h5>
+                    <p>Let's change your new fashion , new outfit with us. To be comfortable , be looking good , be up to date.</p>
+                    <h5 class="text-danger">#Male_Fashion</h5>
+                </div>
+            </div>
+        </section>
+
+    <div class="container-fluid d-flex justify-content-center bg-black bg-black " id="register">
+        <footer class="py-5  text-white">
+            <div class="row container-fluid mx-auto d-flex justify-content-around footer-container">
+            <div class="col-10 col-sm-4 col-lg-3 mb-3 text-center">
+                <img class="img-fluid bg-white p-2" style="border-radius: 20px;" src="../pics/logo.png" alt="">
+                <p>Here is the payment mthods that valid to the customers.</p>
+            </div>
+
+            <div class="col-4 col-lg-2 col-sm-3  mb-3">
+                <h5>Header</h5>
+                <ul class="nav flex-column">
+                    <li class=" mb-2"><a href="#" class=" p-0 nav-link text-white">Clothing Store</a></li>
+                    <li class=" mb-2"><a href="#" class=" p-0 nav-link text-white">Trending Store</a></li>
+                    <li class=" mb-2"><a href="#" class=" p-0 nav-link text-white">Accessories</a></li>
+                    <li class=" mb-2"><a href="#" class=" p-0 nav-link text-white">Sale</a></li>
+                </ul>
+            </div>
+
+            <div class="col-4 col-lg-2 col-sm-3 mb-3">
+                <h5>Header</h5>
+                <ul class="nav flex-column">
+                    <li class=" mb-2"><a href="#" class="nav-link p-0 text-white">Contact Us</a></li>
+                    <li class=" mb-2"><a href="#" class="nav-link p-0 text-white">Payment Methods</a></li>
+                    <li class=" mb-2"><a href="#" class="nav-link p-0 text-white">Delivary</a></li>
+                    <li class=" mb-2"><a href="#" class="nav-link p-0 text-white">Return & Exchanges</a></li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-lg-4  mb-3">
+                <form>
+                <h5>REGISTER</h5>
+                <p>Be the first to know about new arrivals,look books,sales & promos!</p>
+                <div class="d-flex flex-column flex-sm-row w-100 gap-2 position-relative justify-content-center align-items-center">
+                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                    <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                    <i class="bi bi-mailbox position-absolute text-dark" style="right: 10px;font-size: 18px;" type="button"></i>
+                </div>
+                </form>
+            </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 mt-4 border-top">
+            <p class="mx-auto copy-text">Copyright © 20232020 All rights reserved | This template is made with  by Colorlib</p>
+            </div>
+            <a class="footer-btn nav-link d-none" href="#register">Copyright</a>
+        </footer>
+        </div>
+    </main>
+     
+    
+    <script type="module" src="../scripts/main.js"></script>
+    <script type="module" src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 </html>

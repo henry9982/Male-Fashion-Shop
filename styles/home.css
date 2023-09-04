@@ -1,4 +1,15 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
 /* nav tab and input animation */
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: white !important;
+}
 .search-input-cus{
     outline: none;
     box-shadow: none !important;
@@ -8,6 +19,11 @@
     padding: 10px;
     border-radius: 10px;
     transition: all 0.6s ease-out;
+}
+.animated-icon video{
+    width: 45px;
+    height: 45px;
+    --bs-gutter-x: none
 }
 
 .sliderbar{
@@ -39,24 +55,29 @@
     background-color: #96B6C5;
 }
 h3{
-    color: #9ebac5;
+    color: #ADC4CE
 }
 .description-container{
     z-index: 10;
 }
 .description{
-    color: #ffffff;
+    color: white;
     padding: 20px;
     border-radius: 10px;
     padding-right: 10px;
-    background-color: #adc4ce7a;
+    background: #96b6c550;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 /* swiper animation */
 .slide-title,.slide-des,.image{
     opacity: 0;
+}
+
+.row{
+    margin-left: 0;
 }
 @keyframes slideTitleAnimation {
     0%{transform: translateY(30px);opacity: 0;}
@@ -83,6 +104,320 @@ h3{
 }
 /* swiper end */
 
+/* introduction cart */
+.user-intro{
+    padding: 80px 200px;
+}
+.item-pic{
+    width: 300px;
+    background-color: #eae7ee6f;
+}
+.item-des{
+    width: 200px;
+    position: absolute;
+    top: 100px;
+    right: 230px;
+}
+.item-contain{
+    position: relative;
+}
+.item-contain-two{
+    margin-top: -50px;
+}
+.item-contain-three{
+    margin-top: 80px;
+}
+.item-contain-two .item-pic{
+    float: none;
+}
+.item-contain-two .item-des{
+    position: relative;
+    top: 0px;
+    right: 0px;
+}
+
+.item-pic{
+    float: right;
+}
+/* intro cart done */
+
+.shop-now{
+    position: relative;
+    display: inline-block;
+}
+.link-underline-hover{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+.shop-now-hover{
+    background-color: rgb(255, 46, 46);
+    width: 50%;
+    transform: translateX(-100%);
+    left: 100%;
+}
+.add-to-cart-animation{
+    right: 40px;
+    top: 50px;
+}
+.smaple-card-tab{
+    font-size: 19px;
+    font-weight: 500;
+    color: rgb(184, 184, 184);
+}
+.smaple-card-tab:hover{
+    color: black;
+}
+.card-container .card{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.card-image{
+    background-color: rgba(238, 235, 239, 0.719);
+    padding: 10px;
+    overflow: hidden;
+    overflow-x: hidden;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-image img{
+    width: 150px;
+    height: 150px;
+    object-fit:contain;
+}
+.card-body div{
+    top: 0;
+    opacity: 0;
+    color: rgb(255, 34, 34);
+    transition: all 0.3s;
+    cursor: pointer;
+    z-index: 20;
+}
+.hovered .card-body div{
+    top: 15px;
+    opacity: 1;
+}
+.card-body h5{
+    opacity: 1;
+    transition: all 0.5s;
+    font-size: 18px;
+}
+.hovered .card-body h5{
+    opacity: 0;
+}
+.inner-icon{
+    top: 10px;
+    right: 10px;
+    transform: translateX(500px);
+    transition: all 0.9s;
+    background-color: white;
+}
+.hovered .inner-icon{
+    opacity: 1;
+    transform: translateX(0px);
+}
+.clicked-fav .add-to-fav-button{
+    display: none;
+}
+.clicked-fav .fav-animation{
+    display: block;
+}
+.fav-animation{
+    display: none;
+    padding: 6px;
+}
+
+.weekly-sale-contianer{
+    background-color: #f3f2ee;
+    height: 75vh;
+}
+
+.weekly-sale-contianer .inner-container{
+    width: 70%;
+}
+.weekly-image{
+    width: 50%;
+    z-index: 2;
+}
+.weekly-image img{
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.weekly-price{
+    border-radius: 300px;
+    background-color: black;
+    color: white;
+    width: 80px;
+    height: 80px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.weekly-price span{
+    text-decoration: line-through;
+    text-decoration-color: red;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    font-size: 7px;
+}
+.weekly-price small{
+    font-size: 12px;
+}
+.weekly-sale-text-container{
+    text-align: left;
+    margin-left: 30px;
+    z-index: 2;
+}
+.inner-sale-text-container{
+    font-size: 20px;
+}
+.weekly-sale-text-container h4{
+    gap: 30px;
+}
+.weekly-sale-text-container h2{
+    white-space: nowrap;
+}
+.background-animation{
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    z-index: 0;
+    left: 0;
+    /* border-radius: 200px; */
+    /* animation: bounceBall 2s infinite alternate; */
+    /* transform: translateX(-160%); */
+    /* box-shadow: rgba(223, 223, 223, 0.25) 0px 30px 60px -12px inset, rgba(207, 207, 207, 0.3) 0px 18px 36px -18px inset; */
+}
+/* @keyframes bounceBall {
+    25%{
+        border-bottom-left-radius: 50px;
+        border-top-left-radius: 50px;
+    }
+    100%{
+        transform: translateX(0px);
+    }
+} */
+.footer-container{
+    font-size: 12px;
+    width: 1000px;
+}
+.intro-image-grid-container img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+.intro-image-grid-container{
+    padding: 0 10px;
+}
+.intro-grid-text-container{
+    width: 300px;
+}
+
+/* scroll animation */
+
+.hidden-right{
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 1s;
+}
+.show-right{
+    opacity: 1;
+    transform: translateX(0);
+}
+.hidden-left{
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 1s;
+}
+.show-left{
+    opacity: 1;
+    transform: translateX(0);
+}
+.hidden-up{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s;
+}
+.show-up{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-body img{
+    width: 25%;
+}
+.intro-grid-container{
+    height: 105vh;
+}
+@media screen and (max-width:1190px) {
+    .user-intro{
+        padding: 80px 150px;
+    }
+    .item-contain-two{
+        margin-top: -100px;
+    }
+}
+
+@media screen and (max-width:1080px) {
+    .user-intro{
+        padding: 80px 80px;
+    }
+    .item-contain-two{
+        margin-top: -100px;
+    }
+
+    .weekly-image img{
+        width: 280px;
+    }
+    .footer-container{
+        width: 90%;
+    }
+}
+@media screen and (max-width:995px) {
+    .user-intro{
+        padding: 80px 100px;
+    }
+    .item-pic{
+        width: 250px;
+        background-color: #eae7ee6f;
+    }
+    .item-contain-three{
+        margin-top: 0;
+    }
+    .weekly-image img{
+        width: 250px;
+    }
+    .intro-image-grid-container img{
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+    .intro-grid-text-container{
+        width: 250px;
+        margin-left: 15px;
+        transform: translateX(20px);
+    }
+}
+
+
 @media screen and (max-width:800px) {
     .description-container{
         position: absolute;
@@ -99,12 +434,99 @@ h3{
         height: fit-content;
         align-self: flex-end;
     }
-
+    .weekly-image{
+        width: 50%;
+    }
+    .weekly-image img{
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+    }
+    .weekly-sale-contianer .inner-container{
+        width: 100%;
+    }
 }
-@media screen and (max-width:550px) {
+@media screen and (max-width:770px) {
+    .user-intro{
+        padding: 80px 0px;
+    }
+    .weekly-sale-text-container{
+        margin-left: 140px;
+    }
+    .intro-grid-text-container{
+        width: 90%;
+        margin-top: 25px;
+        /* transform: translateX(0); */
+    }
+}
+@media screen and (max-width:666px) {
+    .weekly-sale-text-container{
+        margin-left: 150px;
+    }
+    .copy-text{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:560px) {
     .description-container{
         top: 5px;
     }
+    .user-intro{
+        padding: 80px 30px;
+    }
+    .item-contain .item-pic{
+        float: none;
+        width: 100%;
+    }
+    .item-des{
+        width: 100%;
+        position: relative;
+        top: 0px;
+        right: 0px;
+    }
+    .item-contain-two{
+        margin: 0;
+    }
+    .item-contain{
+        margin: 20px;
+    }
+    .weekly-sale-text-container{
+        margin-left: 100px;
+    }
+    .intro-image-grid-container img{
+        width: 130px;
+        height: 130px;
+        object-fit: cover;
+    }
+    .intro-image-grid-container{
+        justify-content: center;
+    }
+    .hidden-right{
+        opacity: 1;
+        transform: translateX(0px);
+        transition: all 1s;
+    }
+    .show-right{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .hidden-left{
+        opacity: 1;
+        transform: translateX(-0px);
+        transition: all 1s;
+    }
+    .show-left{
+        opacity: 1;
+    }
+    .show-up{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .hidden-up{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
 }
 @media screen and (max-width:450px) {
     .description-container{
@@ -114,6 +536,56 @@ h3{
     }
     .image{
         width: 100%;
+    }
+    .weekly-price{
+        top: -25px;
+        right: 40px;
+    }
+    .smaple-card-tab{
+        font-size: 17px;
+        font-weight: 500;
+        color: rgb(184, 184, 184);
+    }
+    .card-image{
+        width: 150px;
+        height: 150px;
+    }
+    .card-image img{
+        width: 120px;
+        height: 120px;
+    }
+    .inner-icon{
+        top: 10px;
+        right: 10px;
+        opacity: 0;
+        transform: translateX(10px);
+        transition: all 0.9s;
+    }
+    .weekly-sale-text-container{
+        margin-left: 100px;
+    }
+    .weekly-sale-text-container h4{
+        gap: 10px;
+    }
+    .weekly-image{
+        width: 300px;
+    }
+    .intro-image-grid-container img{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    .weekly-sale-text-container{
+        margin-left: 20px;
+    }
+    .smaple-card-tab{
+        font-size: 14px;
+        font-weight: 500;
+        color: rgb(184, 184, 184);
     }
 }
 @media screen and (max-width:380px) {
@@ -126,6 +598,34 @@ h3{
     .image{
         width: 100%;
     }
+    .intro-image-grid-container img{
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+    .card-body h5{
+        font-size: 14px;
+    }
+    .card-image{
+        background-color: rgba(238, 235, 239, 0.719);
+        padding: 10px;
+        overflow: hidden;
+        overflow-x: hidden;
+        width: 120px;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-image img{
+        width: 80px;
+        height: 80px;
+        object-fit:contain;
+    }
+    .card-body img{
+        width: 40px;
+    }
+
 }
 @media screen and (max-width:350px) {
     .description-container{
@@ -137,6 +637,66 @@ h3{
     .image{
         width: 110%;
     }   
+    .weekly-price{
+        top: -60px;
+        right: 30px;
+    }
+    .weekly-image{
+        width: 250px;
+    }
+    .weekly-image img{
+        width: 250px;
+    }
+    .weekly-sale-text-container h2{
+        white-space: pre-wrap;
+    }
+    .slide-title,.slide-des{
+        margin-left: 7px;
+    }
+    .smaple-card-tab{
+        font-size: 10px;
+        font-weight: 500;
+        color: rgb(184, 184, 184);
+    }
+    .intro-image-grid-container img{
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+    }
+}
+@media screen and (max-width:300px) {
+    .background-animation{
+        width: 90%;
+        height: 200px;
+        background-color: white;
+        z-index: 0;
+        left: 0;
+        /* border-radius: 200px; */
+        /* animation: bounceBall 2s infinite alternate; */
+        /* transform: translateX(-160%); */
+        /* box-shadow: rgba(223, 223, 223, 0.25) 0px 30px 60px -12px inset, rgba(207, 207, 207, 0.3) 0px 18px 36px -18px inset; */
+    }
+    .intro-image-grid-container img{
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+    }
+    .intro-grid-text-container h5{
+        font-size: 13px;
+    }
+    .intro-grid-text-container p{
+        font-size: 9px;
+    }
+    .intro-grid-container{
+        height: 80vh;
+    }
+}
+@media screen and (max-width:283px) {
+    .smaple-card-tab{
+        font-size: 9px;
+        font-weight: 500;
+        color: rgb(184, 184, 184);
+    }
 }
 
 

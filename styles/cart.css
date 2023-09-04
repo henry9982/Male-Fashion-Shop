@@ -1,0 +1,138 @@
+
+.place-order-button{
+    user-select: none;
+    position: relative;
+    display: inline-block;
+    padding: 8px 36px;
+    margin: 10px;
+    border: 1px solid;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 18px;
+    border-radius: 50px;
+    border: none;
+    background-color: #E9B384;
+    overflow: hidden;
+}
+
+.ripple{
+    position: absolute;
+    background-color: #fff;
+    transform: translate(-50%,-50%);
+    border-radius: 50px;
+    pointer-events: none;
+    animation: animate 1s linear infinite;
+}
+@keyframes animate {
+    0%{
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+    100%{
+        width: 550px;
+        height: 550px;
+        opacity: 0;
+    }
+}
+
+.payment-summary{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='900' height='560' preserveAspectRatio='none' viewBox='0 0 900 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1103%26quot%3b)' fill='none'%3e%3crect width='900' height='560' x='0' y='0' fill='rgba(221%2c 221%2c 221%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c343.63C64.234%2c346.789%2c128.16%2c316.447%2c175.149%2c272.537C218.689%2c231.851%2c221.229%2c166.53%2c247.012%2c112.806C273.459%2c57.7%2c342.634%2c12.248%2c328.62%2c-47.248C314.324%2c-107.942%2c229.928%2c-117.49%2c183.075%2c-158.635C144.56%2c-192.458%2c126.692%2c-249.82%2c78.395%2c-266.988C29.44%2c-284.39%2c-23.113%2c-263.064%2c-73.343%2c-249.783C-124.92%2c-236.146%2c-182.288%2c-228.539%2c-217.755%2c-188.686C-253.351%2c-148.688%2c-250.352%2c-89.924%2c-262.098%2c-37.684C-274.963%2c19.531%2c-308.473%2c76.774%2c-289.956%2c132.418C-271.044%2c189.249%2c-212.831%2c220.575%2c-164.418%2c255.84C-113.161%2c293.177%2c-63.337%2c340.516%2c0%2c343.63' fill='%23909090'%3e%3c/path%3e%3cpath d='M900 888.4639999999999C967.113 880.201 1039.878 902.69 1097.647 867.544 1155.819 832.153 1171.338 757.9639999999999 1208.397 700.84 1253.124 631.897 1353.915 577.651 1338.0230000000001 497.022 1321.87 415.06899999999996 1194.9560000000001 414.94 1139.699 352.299 1085.243 290.565 1094.522 181.41899999999998 1023.265 140.2 950.881 98.32900000000001 857.2860000000001 117.76499999999999 777.4929999999999 142.77999999999997 698.596 167.514 615.1990000000001 206.78500000000003 576.9870000000001 280.108 540.1120000000001 350.866 597.3779999999999 435.91200000000003 583.7570000000001 514.531 569.486 596.896 479.508 662.407 496.572 744.239 513.662 826.196 589.554 892.212 668.388 920.395 743.29 947.173 821.051 898.184 900 888.4639999999999' fill='white'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1103'%3e%3crect width='900' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;    color: rgb(248, 248, 248);
+    margin-left: 10px;
+    padding: 100px;
+}
+.payment-summary-money{
+    color: rgb(63, 63, 63);
+}
+.item-container{
+    /* background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='440' height='160' preserveAspectRatio='none' viewBox='0 0 440 160'%3e%3cg mask='url(%26quot%3b%23SvgjsMask2424%26quot%3b)' fill='none'%3e%3crect width='440' height='160' x='0' y='0' fill='url(%26quot%3b%23SvgjsLinearGradient2425%26quot%3b)'%3e%3c/rect%3e%3cpath d='M0 0L138.35 0L0 21.41z' fill='rgba(255%2c 255%2c 255%2c .1)'%3e%3c/path%3e%3cpath d='M0 21.41L138.35 0L199.01999999999998 0L0 48.35z' fill='rgba(255%2c 255%2c 255%2c .075)'%3e%3c/path%3e%3cpath d='M0 48.35L199.01999999999998 0L273.86 0L0 94.09z' fill='rgba(255%2c 255%2c 255%2c .05)'%3e%3c/path%3e%3cpath d='M0 94.09L273.86 0L318.39 0L0 137.75z' fill='rgba(255%2c 255%2c 255%2c .025)'%3e%3c/path%3e%3cpath d='M440 160L265.06 160L440 136.57999999999998z' fill='rgba(0%2c 0%2c 0%2c .1)'%3e%3c/path%3e%3cpath d='M440 136.57999999999998L265.06 160L131.03 160L440 63.67999999999998z' fill='rgba(0%2c 0%2c 0%2c .075)'%3e%3c/path%3e%3cpath d='M440 63.67999999999999L131.02999999999997 160L108.68999999999997 160L440 25.779999999999994z' fill='rgba(0%2c 0%2c 0%2c .05)'%3e%3c/path%3e%3cpath d='M440 25.78L108.69 160L37.459999999999994 160L440 13.23z' fill='rgba(0%2c 0%2c 0%2c .025)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask2424'%3e%3crect width='440' height='160' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='50%25' x2='100%25' y2='50%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient2425'%3e%3cstop stop-color='rgba(14%2c 42%2c 71%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(190%2c 190%2c 190%2c 1)' offset='0'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e"); */
+    background-color: rgba(245, 245, 245, 0.358);
+        height: 100px;
+    color: black;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;    color: rgb(248, 248, 248);
+    width: 360px;
+}
+.summary-container{
+    display: grid;
+    grid-template-columns: 1fr 360px;
+}
+
+.image-contain img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background-color: #ADC4CE;
+    border-radius: 5px;
+}
+.payment-container{
+    height: 330px;
+}
+
+@media screen and (max-width:1140px) {
+    .summary-container{
+        grid-template-columns: 1fr;
+    }
+    .payment-summary{
+        width: 470px;
+        grid-row: 1;
+        margin: 20px auto;
+    }
+    .item-container{
+        width: 400px;
+    }
+}
+@media screen and (max-width:960px) {
+    .payment-summary{
+        grid-row: 1;
+        margin-bottom: 12px;
+    }
+}
+@media screen and (max-width:870px) {
+    .item-container{
+        width: 370px;
+    }
+}
+@media screen and (max-width:806px) {
+    .item-container{
+        width: 420px;
+    }
+}
+@media screen and (max-width:510px) {
+    .item-container{
+        width: 370px;
+        margin-left: -15px;
+    }
+    .payment-container{
+        width: 400px;
+        height: 330px;
+    }
+}
+@media screen and (max-width:400px) {
+    .item-container{
+        width: 370px;
+        margin-left: -5px;
+    }
+    .payment-container{
+        width: 370px;
+        height: 330px;
+        margin-right: -4px;
+    }
+}
+@media screen and (max-width:370px) {
+    .payment-container{
+        width: 95%;
+        height: 330px;
+        margin-right: -4px;
+        margin: 0 auto;
+    }
+    .item-container{
+        width: 95%;
+        margin-left: -5px;
+    }
+}
+

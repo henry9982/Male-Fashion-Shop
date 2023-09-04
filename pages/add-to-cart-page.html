@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MF Checkout</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/styles/cart.css">
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/shop.css">
+    <script src="https://kit.fontawesome.com/d1b39a22d9.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <header class="container-fluid container-md d-flex align-items-center justify-content-between p-2">
+        <div class="" style="width: 10px;">
+            <a rel="noopener noreferrer" href="/pages/home.html">
+                <img class="d-md-block d-none" src="/pics/logo.png" alt="">
+                <img class="d-md-none d-block" src="   https://cdn-icons-png.flaticon.com/512/880/880906.png " width="46" height="46" alt="" title="" class="img-small">
+            </a>
+        </div>
+        <div class="d-flex align-items-center justify-content-center"style="font-size:21px;font-weight:500;">
+          <img src="" width="46" height="46" alt="" title="" class="img-small"> ( <a rel="noopener noreferrer" class="nav-link quantity-show" style="color: #7C9D96;" href="/pages/shop.html">2 items</a> )
+        </div>
+        <div>
+            <i class="fa-solid fa-lock " style="font-size: 30px;"></i>
+        </div>
+    </header>
+
+    <main class="container-fluid d-flex justify-content-center align-items-center my-5" >
+        <div class="px-2 d-flex flex-column justify-content-center align-items-center">
+            <h4 class="" style="margin-left: 0;">
+              <video width="56" height="56" preload="none" style="background: transparent  url('https://cdn-icons-png.flaticon.com/512/11681/11681396.png') 50% 50% / fit no-repeat;" autoplay="autoplay" loop="true" muted="muted" playsinline="">
+                <source src="https://cdn-icons-mp4.flaticon.com/512/11681/11681396.mp4" type="video/mp4">
+            </video>            </h4>
+            <div class="summary-container">
+                <div class="items-container order-summary row row-cols-2 d-flex justify-content-center" >
+                  
+                </div>
+                <div class="payment-summary payment-container p-3 d-flex flex-column justify-content-center">
+                    <div class="payment-summary-title h5">
+                      Order Summary
+                    </div>
+          
+                    <div class="payment-summary-row py-1 d-flex justify-content-between align-items-center">
+                      <div>Items ( <span class="item-count">0</span> ):</div>
+                      <div class="payment-summary-money total-price">$42.75</div>
+                    </div>
+          
+                    <div class="payment-summary-row py-1 d-flex justify-content-between align-items-center">
+                      <div>Shipping &amp; handling:</div>
+                      <div class="payment-summary-money shipping-handling">$4.99</div>
+                    </div>
+          
+                    <div class="payment-summary-row py-1 subtotal-row d-flex justify-content-between align-items-center">
+                      <div style="padding-top: 8px;">Total before tax:</div>
+                      <div class="payment-summary-money total-before-tax" style="padding-top: 8px;border-top: 1px solid rgba(169, 169, 169, 0.642);">$47.74</div>
+                    </div>
+          
+                    <div class="payment-summary-row py-1 d-flex justify-content-between align-items-center mb-1">
+                      <div>Estimated tax (10%):</div>
+                      <div class="payment-summary-money ten-percent-tax">$4.77</div>
+                    </div>
+          
+                    <div class="payment-summary-row py-1 total-row d-flex justify-content-between align-items-center pt-3" style="border-top: 1px solid rgba(183, 183, 183, 0.575);">
+                      <div>Order total:</div>
+                      <div class="payment-summary-money order-total">$52.51</div>
+                    </div>
+          
+                    <a class="align-self-center place-order-button container-fluid text-center" href="#">Place Your Order</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script type="module" src="/scripts/checkout.js"></script>
+    <script type="module" src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>

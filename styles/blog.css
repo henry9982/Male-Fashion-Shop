@@ -1,0 +1,143 @@
+.our-blog-message-container{
+    background-image: url(https://ivalo.com/cdn/shop/files/bg-working-conditions_1370x.jpg?v=1679477063);
+    width: 100%;
+    height: 45vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.our-blog-message-container div{
+    color: white;
+    font-size: 45px;
+    font-weight: 500;
+    z-index: 10;
+    user-select: none;
+}
+.our-blog-message-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.176); /* Adjust the color and opacity here */
+    pointer-events: none; /* Allows clicks to pass through to the image */
+  }
+
+.blog-card-container{
+    width: 900px;
+    margin: 80px auto;
+
+}
+  .blog-image-container{
+    overflow: hidden;
+    width: 100%;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blog-image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+.blog-text-container{
+    margin: 30px;
+    background-color: white;
+    margin-top: -30px;
+    padding: 15px 20px;
+    transition:  all 0.5s;
+    height: 150px;
+}
+.blog-card:hover .blog-text-container{
+    box-shadow: rgba(183, 183, 183, 0.2) 0px 7px 29px 0px;
+
+}
+.blog-text-container small{
+    font-size: 10px;
+}
+.blog-text-container h5{
+    font-size: 13px;
+    margin-top: 10px;
+    line-height: 20px;
+}
+.blog-text-container h6{
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    display: inline;
+    padding: 5px 0px;
+}
+.blog-text-container h6::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s;
+}
+.blog-card:hover .blog-text-container h6::after{
+    width: 40px;
+    background-color: red;
+}
+
+@media screen and (max-width:950px) {
+    .blog-card-container{
+        width: 750px;
+        margin: 80px auto;
+    
+    }
+}
+@media screen and (max-width:810px) {
+    .blog-card-container{
+        width: 650px;
+        margin: 80px auto;
+    }
+}
+@media screen and (max-width:710px) {
+    .blog-card-container{
+        width: 550px;
+        margin: 80px auto;
+    }
+}
+@media screen and (max-width:600px) {
+    .blog-card-container{
+        width: 450px;
+        margin: 80px auto;
+    }
+    .our-blog-message-container{
+        width: 100%;
+        height: 35vh;
+    }
+}
+@media screen and (max-width:480px) {
+    .blog-card-container{
+        width: 400px;
+        margin: 80px auto;
+    }
+}
+@media screen and (max-width:426px) {
+    .blog-card-container{
+        width: 95%;
+    }
+    .blog-text-container{
+        width: auto;
+    }
+    .row{
+        --bs-gutter-x: 1.5rem;
+    }
+}
+@media screen and (max-width:330px) {
+    .blog-text-container h6{
+        width: 95%;
+        white-space: nowrap;
+    }
+}

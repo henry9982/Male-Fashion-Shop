@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/singup.css">
+    <script src="https://kit.fontawesome.com/d1b39a22d9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+        <div class="singup-form d-flex justify-content-center align-items-center singup-form-container">
+            <div class="into-container align-self-stretch  flex-column justify-content-between align-items-center gap-3 form-into">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h2>Sing Up</h2>
+                    <small>To style your look , to be morden , be up to date and to be in touch with all the new fahsion.</small>
+                </div>
+                <a href="login.html" class="login-btn">Login</a>
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-center gap-2 form-check-contianer position-relative">
+                <div class="text-danger position-absolute fill-out-form-error"><small> <i class="bi bi-exclamation-circle"></i><small> Please fill out the form first</small></small></div>
+                <div class="d-flex flex-column justify-content-center align-items-center position-relative overflow-visible">
+                    <video width="46" height="46" preload="none" style="background: transparent  url('https://cdn-icons-png.flaticon.com/512/10971/10971042.png') 50% 50% / fit no-repeat;" autoplay="autoplay" loop="true" muted="muted" playsinline="">
+                        <source src="https://cdn-icons-mp4.flaticon.com/512/10971/10971042.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="input-group mb-3 position-relative">
+                    <span class="input-group-text border-remove" id="inputGroup-sizing-default"><i class="bi bi-person"></i></span>
+                    <input type="text" placeholder="Username" class="form-control border-remove user-name-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+                <div class="input-group mb-3 position-relative">
+                    <span class="input-group-text border-remove" id="inputGroup-sizing-default"><i class="bi bi-envelope-at"></i></span>
+                    <input type="text" placeholder="Email" class="form-control border-remove email-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <div class="text-danger position-absolute email-error "> <i class="bi bi-exclamation-circle"></i> <small class="email-message">Email Already in Use</small> </div>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text border-remove" id="inputGroup-sizing-default"><i class="fa-solid fa-key"></i></span>
+                    <input type="text" placeholder="Password" class="form-control border-remove password-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text border-remove" id="inputGroup-sizing-default"><i class="fa-solid fa-key"></i></span>
+                    <input type="text" placeholder="Confirm Password" class="form-control border-remove confirm-password-input" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                    <div class="text-danger position-absolute confirm-error "> <i class="bi bi-exclamation-circle"></i> <small>Password & Confirm Password do not match</small> </div>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                    <label class="form-check-label" for="flexCheckDefault">
+                        <small> <small>By signing up, I agree with the</small> <small style="color: #98EECC;">Terms and Conditions</small>.
+                        </small>
+                    </label>
+                </div>
+                <a  class="nav-link link-to-login" href="login.html"><small>Or Already have an account?</small></a>
+                <button class="singup-btn">SING UP</button>
+            </div>
+            <a class="d-none home-click" href="home.html">TO HOME PAGE</a>
+        </div>
+
+      <script type="module" src="../scripts/singup.js"></script>
+      <script type="module" src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  </body>
+</html>

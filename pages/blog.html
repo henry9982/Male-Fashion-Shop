@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MF Blog</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../styles/blog.css">
+    <link rel="stylesheet" href="../styles/contacts.css">
+    <link rel="stylesheet" href="../styles/shop.css">
+    <link rel="stylesheet" href="../styles/home.css">
+    <script src="https://kit.fontawesome.com/d1b39a22d9.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+</head>
+<body>
+    <header class="container-fluid bg-dark text-white d-none d-lg-block">
+        <div class="container inner-container-noti-bar d-flex justify-content-between py-2 px-5">
+            <small>
+                Free shipping, 30-day return or refund guarantee
+            </small>
+            <small class="d-flex gap-1">
+                <a href="login.html" class="nav-link">LOGIN</a>
+                <video width="20" height="20" preload="none" style="background: transparent  url('https://cdn-icons-png.flaticon.com/512/8121/8121295.png') 50% 50% / fit no-repeat;border-radius: 100px;" autoplay="autoplay" loop="true" muted="muted" playsinline="">
+                    <source src="https://cdn-icons-mp4.flaticon.com/512/8121/8121295.mp4" type="video/mp4">
+                </video>
+            </small>
+        </div>
+    </header>
+    <header class=" bg-body-tertiary bg-white p-2" style="box-shadow: rgba(225, 225, 225, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;">
+        <nav class="navbar container justify-content-between ">
+            <a href="home.html" class="navbar-brand"><img class="img-fluid" src="../pics/logo.png" alt=""></a>
+            <div class="flex-grow-1 d-none d-lg-block flex-column position-relative link-outer-container">
+                <ul class="d-flex justify-content-around mb-0 link-container position-relative">
+                </ul>
+                <div class="sliderbar"></div>
+            </div>
+            <ul class="d-flex mb-0 d-none d-lg-block search-container position-relative">
+                <div class="input-group flex-row overflow-x-hidden flex-nowrap inner-container position-relative">
+                    <input type="text" class="search-input-cus header-search-input"  placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <i class="bi bi-x-lg position-absolute cancle" style="right: 50px;top: 11px;display: none;"></i>
+                    <button class="btn btn-outline-secondary search-btn header-search-btn" type="button" id="button-addon2 position-relative"><i class="bi bi-search"></i></button>
+                </div>
+            </ul>
+            <div class="d-none d-lg-block mx-2 ">
+                <ul class="d-flex justify-content-between mb-0 gap-4">
+                    <li class="nav-link"><a rel="noopener noreferrer" class="nav-link fav-tab" href="fav-cart.html"><i class="position-relative bi bi-heart"><div class="fst-normal position-absolute text-warning fav-item-count" style="right: -5px; top: -14px;">0</div></i></a></li>
+                    <li class="nav-link"><a rel="noopener noreferrer" class="nav-link add-to-cart-tab" href="add-to-cart-page.html"><i class="position-relative bi bi-bag-heart"><div class="fst-normal position-absolute text-warning quantity-number" style="right: -5px; top: -14px;">0</div></i></a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars d-block d-lg-none p-0" style="font-size: 30px;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" href='#offcanvas' role="button" aria-controls="offcanvasScrolling"></i>
+        </nav>
+    </header>
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasLable">Search & Links</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body container p-5">
+            <div class="row row-cols-1 gap-3 d-flex justify-content-center">
+                <div class="row text-center">
+                    <div class="col-4">
+                        <li class="nav-link"><a rel="noopener noreferrer" class="nav-link" href="fav-cart.html"><i class="position-relative bi bi-heart"style="font-size:20px"><small class="fst-normal position-absolute text-warning fav-item-count" style="right: -6px; top: -16px;">0</small></i></a></li>
+                    </div>
+                    <div class="col-4">
+                        <li class="nav-link"><a rel="noopener noreferrer" class="nav-link" href="login.html"><i title="Register" class="position-relative bi bi-person-square"style="font-size:20px"></i></a></li>
+                    </div>
+                    <div class="col-4">
+                        <li class="nav-link"><a rel="noopener noreferrer" class="nav-link" href="add-to-cart-page.html"><i class="position-relative bi bi-bag-heart"style="font-size:20px"><small class="fst-normal position-absolute text-warning quantity-number" style="right: -6px; top: -16px;">0</small></i></a></li>
+                    </div>
+                    <div class="input-group my-3">
+                        <input type="text" class="form-control offcan-input" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary offcan-btn" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+                <div class="col">
+                    <a rel="noopener noreferrer" href="home.html" class="nav-link" style="font-size: 18px;">
+                        Home
+                    </a>                    
+                </div>
+                <div class="col">
+                    <a rel="noopener noreferrer" href="shop.html" class="nav-link" style="font-size: 18px;">
+                        Shop
+                    </a>                    
+                </div>
+                <div class="col">
+                    <a rel="noopener noreferrer"  href="blog.html" class="nav-link" style="font-size: 18px;">
+                        Blog
+                    </a>
+                </div>
+                <div class="col">
+                    <a rel="noopener noreferrer" href="contacts.html" class="nav-link" style="font-size: 18px;">
+                        Contacts
+                    </a>
+                </div>
+                <div class="col">
+                    <small>Free shipping, 30-day return or refurn guarantee.</small>
+                </div>
+                <div class="row text-center">
+                    <div class="col"><a href="#">
+                        Privacy
+                    </a></div>
+                    <div class="col"><a href="#">
+                        Policy
+                    </a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="our-blog-message-container">
+        <div class="hidden-up">Our Blog</div>
+    </div>
+
+
+    <main class="blog-card-container">
+        <div class="row blog-cards-contain">
+            
+        </div>
+    </main>
+
+        
+        <div class="container-fluid d-flex justify-content-center bg-black bg-black mt-5" id="register">
+            <footer class="py-5  text-white">
+                <div class="row container-fluid mx-auto d-flex justify-content-around footer-container">
+                <div class="col-10 col-sm-4 col-lg-3 mb-3 text-center">
+                    <img class="img-fluid bg-white p-2" style="border-radius: 20px;" src="../pics/logo.png" alt="">
+                    <p>Here is the payment mthods that valid to the customers.</p>
+                </div>
+    
+                <div class="col-4 col-lg-2 col-sm-3  mb-3">
+                    <h5>Header</h5>
+                    <ul class="nav flex-column">
+                        <li class=" mb-2"><a href="shop.html" class=" p-0 nav-link text-white">Clothing Store</a></li>
+                        <li class=" mb-2"><a href="shop.html" class=" p-0 nav-link text-white">Trending Store</a></li>
+                        <li class=" mb-2"><a href="shop.html" class=" p-0 nav-link text-white">Accessories</a></li>
+                        <li class=" mb-2"><a href="shop.html" class=" p-0 nav-link text-white">Sale</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-4 col-lg-2 col-sm-3 mb-3">
+                    <h5>Header</h5>
+                    <ul class="nav flex-column">
+                        <li class=" mb-2"><a href="#" class="nav-link p-0 text-white">Contact Us</a></li>
+                        <li class=" mb-2"><a href="#" class="nav-link p-0 text-white">Payment Methods</a></li>
+                        <li class=" mb-2"><a href="#" class="nav-link p-0 text-white">Delivary</a></li>
+                        <li class=" mb-2"><a href="#" class="nav-link p-0 text-white">Return & Exchanges</a></li>
+                    </ul>
+                </div>
+    
+                <div class="col-12 col-lg-4  mb-3">
+                    <form>
+                    <h5>REGISTER</h5>
+                    <p>Be the first to know about new arrivals,look books,sales & promos!</p>
+                    <div class="d-flex flex-column flex-sm-row w-100 gap-2 position-relative justify-content-center align-items-center">
+                        <label for="newsletter1" class="visually-hidden">Email address</label>
+                        <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                        <i class="bi bi-mailbox position-absolute text-dark" style="right: 10px;font-size: 18px;" type="button"></i>
+                    </div>
+                    </form>
+                </div>
+                </div>
+    
+                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 mt-4 border-top">
+                <p class="mx-auto copy-text">Copyright © 20232020 All rights reserved | This template is made with  by Colorlib</p>
+                </div>
+                <a class="footer-btn nav-link d-none" href="#register">Copyright</a>
+            </footer>
+        </div>
+
+        <script type="module" src="../scripts/blog.js"></script>
+        <script type="module" src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>
