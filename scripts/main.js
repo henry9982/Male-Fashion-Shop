@@ -247,7 +247,7 @@ export function promotionTimeCountDown() {
         if (timeRemaining <= 0) {
             clearInterval(intervalId)
             const reloadTime = new Date ()
-            reloadTime.setDate(reloadTime.getDate+7)
+            reloadTime.setDate(reloadTime.getDate()+7)
             storedTargetDate = reloadTime
             localStorage.setItem('targetdate',JSON.stringify(reloadTime))
             indexToChooseProduct++
